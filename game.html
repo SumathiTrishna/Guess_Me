@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Game</title>
+   <link rel="stylesheet" href="game.css">
+</head>
+<body>
+   <center>
+      <form>
+<h1>GUESS THE NUMBER!</h1>
+<br>
+<input id="guessno">
+<br>
+<button onclick="check()"> check</button>
+<br>
+<p id="result">You are correct/wrong</p>
+<p id="score">Score:<span id="totalscore">10</span></p>
+</form>
+</center>
+   
+<script>
+     var guessno=document.getElementById("guessno")
+     var result=document.getElementById("result")
+     var score=document.getElementById("totalscore")
+     var randomno=Math.floor(Math.random()*10)+1
+     
+      var totalscore=10
+
+     function check()
+     {
+          var enterno=guessno.value
+       if(randomno==enterno){
+         result.textContent="Right"
+          alert("YOU WON!")
+       }
+       else{
+          totalscore = totalscore - 1
+          score.textContent=totalscore
+         result.textContent="wrong"
+        alert("YOU loose!")
+       }
+     }
+     
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
